@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="catalog_product_badge" resource="default" engine="innodb" comment="Badge list">
+        <column xsi:type="int" name="id" padding="6" unsigned="false" nullable="false" identity="true" comment="ID"/>
+        <column xsi:type="varchar" name="badge_title" nullable="false" length="25" comment="Title"/>
+        <column xsi:type="varchar" name="identifier" nullable="false" length="25" comment="identifier"/>
+        <column xsi:type="varchar" name="image" nullable="false" length="255" comment="image" />
+        <column xsi:type="smallint" name="enabled" nullable="false" comment="enabled" />
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="id"/>
+        </constraint>
+    </table>
+</schema>
